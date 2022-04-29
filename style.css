@@ -22,12 +22,12 @@ article {
   align-items: center;
 }
 
-.player1-markings {
-  background-color: 'green';
+.markingsplayer1 {
+  background-color: rgb(0, 255, 0);
 }
 
-.player2-markings {
-  background-color: 'blue';
+.markingsplayer2 {
+  background-color: blue;
 }
 
 .board {

@@ -39,8 +39,8 @@ I used the same principle over and over again:
 ==This readme file will be updated along the project==
 
 - ~~Draw the grid: a 3x3 array~~
-- Draw something on the grid
-  - Be sure that the drawings don't overlap and you can only draw on empty spots
+- ~~Draw something on the grid~~
+  - ~~Be sure that the drawings don't overlap and you can only draw on empty spots~~
 - Implement 2 players taking turns (idea to use: a counter, odd player1, even player2, image sub-routines)
 - These 2 players draw something different
 - Implement the flow of the program (image sub-routines)
