@@ -43,8 +43,8 @@ I used the same principle over and over again:
   - ~~Be sure that the drawings don't overlap and you can only draw on empty spots~~
 - ~~Implement 2 players taking turns (idea to use: a counter, odd player1, even player2, image sub-routines)~~
 - ~~These 2 players draw something different~~
-- Implement the flow of the program (image sub-routines)
-- Implement the rules for winning
+- ~~Implement the flow of the program (image sub-routines)~~
+- ~~Implement the rules for winning~~
 - Once I have a working prototype, I will start to make it prettier.
 - If I have enough time, I will try to add some functionalities. First thoughts are: sound effects, characters speaking to each other on each iteration, different profiles for players.
 - Finally,
