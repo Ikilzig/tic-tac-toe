@@ -18,8 +18,14 @@ article {
   align-content: center;
   padding: 50px;
 }
-.player1 .player2 {
+.player-1 {
   align-items: center;
+  color: green;
+}
+
+.player-2 {
+  align-items: center;
+  color: blue;
 }
 
 .markingsplayer1 {
