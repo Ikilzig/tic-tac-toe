@@ -1,0 +1,52 @@
+h1 {
+  color: red;
+  text-align: center;
+}
+body {
+  display: grid;
+  justify-content: center;
+  align-content: space-evenly;
+  justify-items: center;
+}
+section {
+  display: flex;
+  flex-direction: row;
+}
+
+article {
+  display: inline-grid;
+  align-content: center;
+  padding: 50px;
+}
+.player1 .player2 {
+  align-items: center;
+}
+
+.player1-markings {
+  background-color: 'green';
+}
+
+.player2-markings {
+  background-color: 'blue';
+}
+
+.board {
+  grid-template-columns: 50px 50px 50px;
+  grid-template-rows: 50px 50px 50px;
+  column-gap: 10px;
+  row-gap: 15px;
+}
+div {
+  border: 1px solid black;
+  height: 50px;
+  width: 50px;
+}
+
+aside {
+  text-align: center;
+  margin: 50px;
+}
+
+footer {
+  margin: 50px;
+}
