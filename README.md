@@ -65,3 +65,6 @@ I used the same principle over and over again:
 - Coding is also fun (even if the code is still not working)
 - Parvus error in principio, magnus est in fine (A small error in the beginning [planning] is a big error at the end of the job)
 - TBA
+  Monkey Island
+
+<a href="https://ikilzig.github.io/tic-tac-toe/" target="_blank">Click here to play the game</a>
