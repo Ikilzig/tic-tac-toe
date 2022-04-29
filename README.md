@@ -1,2 +1,5 @@
-# This is a classic TIC-TAC-TOE that pays homage to one of the gratest games EVER (from my childhood, at least!) Monkey Island.
-# Instead of a unpolite-sword-fight, beat your enemies in Tic-Tac-Toe!
+# TIC - TAC - TOE
+
+This is a take on the classic TIC-TAC-TOE that pays homage to one of the best games EVER (at least, of my childhood...)
+
+Monkey Island
