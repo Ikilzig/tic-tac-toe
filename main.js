@@ -1,6 +1,15 @@
+// general counters
+var player1Wins = 0;
+var player2Wins = 0;
 var generalTurnCounter = 0;
 
+// general variables
+var boardGameArray = document.querySelectorAll('div');
+console.log(boardGameArray);
+
+// Function that regulates players turns
 function playersTurn(event) {
+  // This runs up to 9 times
   if (generalTurnCounter < 9) {
     var squareClickedOn = event.target;
     if (generalTurnCounter % 2 == 0) {
@@ -13,7 +22,7 @@ function playersTurn(event) {
         generalTurnCounter++;
       }
       RulesForWinning();
-      console.log(generalTurnCounter);
+      // console.log(generalTurnCounter); // checkpoint
     } else {
       if (squareClickedOn.tagName === 'DIV') {
         if (
@@ -25,22 +34,30 @@ function playersTurn(event) {
         }
       }
       RulesForWinning();
-      console.log(generalTurnCounter);
+      // console.log(generalTurnCounter); // checkpoint
     }
   } else {
     alert('The game is over!');
   }
 }
-
+// players playing
 document.querySelector('.board').addEventListener('click', playersTurn);
 
-var boardGameArray = document.querySelectorAll('div');
+//reset button
+document
+  .querySelector('.reset-button')
+  .addEventListener('click', resetBoardForNextGame);
 
-console.log(boardGameArray);
+function resetBoardForNextGame(event) {
+  for (i = 0; i < boardGameArray.length; i++) {
+    boardGameArray[i].classList.remove('markingsplayer1');
+    boardGameArray[i].classList.remove('markingsplayer2');
+  }
+  generalTurnCounter = 0;
+}
 
 //rules for winning player 1
 // conditions for winning row 1
-
 function RulesForWinning() {
   if (
     boardGameArray[0].classList.contains('markingsplayer1') &&

@@ -1,25 +1,37 @@
-h1 {
-  text-align: center;
-}
-
-.logo {
-  margin: 0 auto;
-  max-width: 300px;
-}
-
-h2 {
-  text-align: center;
-  max-width: 500px;
-  margin: auto;
-  color: rgb(183, 25, 171);
-}
 body {
   display: grid;
   justify-content: center;
   align-content: space-evenly;
   justify-items: center;
-  background-color: rgba(12, 17, 52, 0.889);
+  background: radial-gradient(rgba(43, 48, 86, 0.889), rgba(12, 17, 52, 0.889));
+  font-family: 'Sail', cursive;
+  margin: 0 auto;
 }
+
+h1 {
+  text-align: center;
+  margin-left: 75px;
+}
+
+.logo {
+  max-width: 600px;
+  text-align: center;
+}
+
+h2,
+h3 {
+  text-align: center;
+  max-width: 600px;
+  margin: auto;
+  color: whitesmoke;
+}
+
+h3 {
+  margin-top: 20px;
+  padding: 10px;
+  border: 5px whitesmoke double;
+}
+
 section {
   display: flex;
   flex-direction: row;
@@ -32,17 +44,17 @@ article {
   padding: 50px;
 }
 .player-1 {
-  align-items: center;
-  color: green;
+  color: whitesmoke;
+  font-size: x-large;
 }
 
 .player-2 {
-  align-items: center;
-  color: blue;
+  color: whitesmoke;
+  font-size: x-large;
 }
 
-.player2-avatar {
-}
+/* .player2-avatar {
+} */
 
 .markingsplayer1 {
   background-image: url('./images/crossespixelated75px2.png');
@@ -61,8 +73,8 @@ article {
   grid-template-rows: 100px 100px 100px;
   column-gap: 15px;
   row-gap: 15px;
-  background-image: url(./images/board\(3\).png);
-  background-size: 405px;
+  background-image: url(./images/game-board.png);
+  background-size: 410px;
   background-position: center;
   background-position-y: center;
   background-repeat: no-repeat;
@@ -74,10 +86,14 @@ div {
 }
 
 aside {
+  color: whitesmoke;
   text-align: center;
-  margin: 50px;
 }
 
+.game-score {
+  text-decoration: underline;
+}
 footer {
   margin: 50px;
+  color: whitesmoke;
 }
