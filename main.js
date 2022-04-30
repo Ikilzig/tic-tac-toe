@@ -20,6 +20,8 @@ function playersTurn(event) {
         )
           squareClickedOn.classList.add('markingsplayer1');
         generalTurnCounter++;
+        document.querySelector('.message-board').textContent =
+          "It is now Capitan LeChuck's turn, he throws bombs";
       }
       RulesForWinning();
       // console.log(generalTurnCounter); // checkpoint
@@ -31,6 +33,8 @@ function playersTurn(event) {
         ) {
           squareClickedOn.classList.add('markingsplayer2');
           generalTurnCounter++;
+          document.querySelector('.message-board').textContent =
+            "It is now Guybrush Treepwood's turn, he fights with swords";
         }
       }
       RulesForWinning();

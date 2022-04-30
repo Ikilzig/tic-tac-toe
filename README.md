@@ -58,8 +58,10 @@ Now that the prototype works, I've started polishing the visual approach. There 
 
 #### JS
 
-- Convert all the alerts to on-screen messages. Use a tag and textContent
+- ~~Convert all the alerts to on-screen messages. Use a tag and textContent~~
 - ~~Add a reset button~~
+- ~~Add a total reset button~~
+- ~~Add messages stating whose turn is next~~
 
 ### Step 5 - Add extra functionalities - Make it better
 
