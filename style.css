@@ -11,12 +11,14 @@ h2 {
   text-align: center;
   max-width: 500px;
   margin: auto;
+  color: rgb(183, 25, 171);
 }
 body {
   display: grid;
   justify-content: center;
   align-content: space-evenly;
   justify-items: center;
+  background-color: rgba(12, 17, 52, 0.889);
 }
 section {
   display: flex;
@@ -43,7 +45,7 @@ article {
 }
 
 .markingsplayer1 {
-  background-image: url('./images/crossespixelated75px.png');
+  background-image: url('./images/crossespixelated75px2.png');
   background-position: center;
   background-repeat: no repeat;
 }
@@ -59,9 +61,14 @@ article {
   grid-template-rows: 75px 75px 75px;
   column-gap: 15px;
   row-gap: 15px;
+  background-image: url(./images/board\(3\).png);
+  background-size: 305px;
+  background-position: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
 }
 div {
-  border: 1px solid black;
+  border: 0px;
   height: 75px;
   width: 75px;
 }
