@@ -1,6 +1,6 @@
 // general counters
-var player1Wins = 0;
-var player2Wins = 0;
+var playerOneWinCounter = 0;
+var playerTwoWinCounter = 0;
 var generalTurnCounter = 0;
 
 // general variables
@@ -10,7 +10,7 @@ console.log(boardGameArray);
 // Function that regulates players turns
 function playersTurn(event) {
   // This runs up to 9 times
-  if (generalTurnCounter < 9) {
+  if (generalTurnCounter < boardGameArray.length) {
     var squareClickedOn = event.target;
     if (generalTurnCounter % 2 == 0) {
       if (squareClickedOn.tagName === 'DIV') {
@@ -54,6 +54,37 @@ function resetBoardForNextGame(event) {
     boardGameArray[i].classList.remove('markingsplayer2');
   }
   generalTurnCounter = 0;
+  document.querySelector('.message-board').textContent = "Let's do it, Pirate!";
+}
+
+//reset score button
+document
+  .querySelector('.reset-score-button')
+  .addEventListener('click', resetAllScore);
+
+function resetAllScore() {
+  document.querySelector('.pointsPlayerOne').textContent = 0;
+  document.querySelector('.pointsPlayerTwo').textContent = 0;
+  document.querySelector('.message-board').textContent =
+    'Argg, that damn Curse!';
+}
+
+//winningfunctions
+
+function playerOneWins() {
+  playerOneWinCounter++;
+  generalTurnCounter = generalTurnCounter + boardGameArray.length;
+  document.querySelector('.pointsPlayerOne').textContent = playerOneWinCounter;
+  document.querySelector('.message-board').textContent =
+    'Guybrush Treepwood wins!';
+}
+
+function playerTwoWins() {
+  playerTwoWinCounter++;
+  generalTurnCounter = generalTurnCounter + boardGameArray.length;
+  document.querySelector('.pointsPlayerTwo').textContent = playerTwoWinCounter;
+  document.querySelector('.message-board').textContent =
+    'Captain LeChuck wins!';
 }
 
 //rules for winning player 1
@@ -64,56 +95,56 @@ function RulesForWinning() {
     boardGameArray[1].classList.contains('markingsplayer1') &&
     boardGameArray[2].classList.contains('markingsplayer1')
   ) {
-    alert('Player 1 wins');
+    playerOneWins();
   } else if (
     //row 2
     boardGameArray[3].classList.contains('markingsplayer1') &&
     boardGameArray[4].classList.contains('markingsplayer1') &&
     boardGameArray[5].classList.contains('markingsplayer1')
   ) {
-    alert('Player 1 Wins');
+    playerOneWins();
   } else if (
     // row 3
     boardGameArray[6].classList.contains('markingsplayer1') &&
     boardGameArray[7].classList.contains('markingsplayer1') &&
     boardGameArray[8].classList.contains('markingsplayer1')
   ) {
-    alert('Player 1 wins');
+    playerOneWins();
   } else if (
     //column 1
     boardGameArray[0].classList.contains('markingsplayer1') &&
     boardGameArray[3].classList.contains('markingsplayer1') &&
     boardGameArray[6].classList.contains('markingsplayer1')
   ) {
-    alert('Player 1 Wins');
+    playerOneWins();
   } else if (
     //column 2)
     boardGameArray[1].classList.contains('markingsplayer1') &&
     boardGameArray[4].classList.contains('markingsplayer1') &&
     boardGameArray[7].classList.contains('markingsplayer1')
   ) {
-    alert('Player 1 wins');
+    playerOneWins();
   } else if (
     // column 3)
     boardGameArray[2].classList.contains('markingsplayer1') &&
     boardGameArray[5].classList.contains('markingsplayer1') &&
     boardGameArray[8].classList.contains('markingsplayer1')
   ) {
-    alert('Player 1 wins');
+    playerOneWins();
   } else if (
     //diagonal 1
     boardGameArray[0].classList.contains('markingsplayer1') &&
     boardGameArray[4].classList.contains('markingsplayer1') &&
     boardGameArray[8].classList.contains('markingsplayer1')
   ) {
-    alert('Player 1 wins');
+    playerOneWins();
   } else if (
     // diagonal 2
     boardGameArray[2].classList.contains('markingsplayer1') &&
     boardGameArray[4].classList.contains('markingsplayer1') &&
     boardGameArray[6].classList.contains('markingsplayer1')
   ) {
-    alert('Player 1 wins');
+    playerOneWins();
   } else if (
     // Player 2
     //row 1
@@ -121,58 +152,59 @@ function RulesForWinning() {
     boardGameArray[1].classList.contains('markingsplayer2') &&
     boardGameArray[2].classList.contains('markingsplayer2')
   ) {
-    alert('Player 2 wins');
+    playerTwoWins();
   } else if (
     //row 2
     boardGameArray[3].classList.contains('markingsplayer2') &&
     boardGameArray[4].classList.contains('markingsplayer2') &&
     boardGameArray[5].classList.contains('markingsplayer2')
   ) {
-    alert('Player 2 Wins');
+    playerTwoWins();
   } else if (
     // row 3
     boardGameArray[6].classList.contains('markingsplayer2') &&
     boardGameArray[7].classList.contains('markingsplayer2') &&
     boardGameArray[8].classList.contains('markingsplayer2')
   ) {
-    alert('Player 2 wins');
+    playerTwoWins();
   } else if (
     //column 1
     boardGameArray[0].classList.contains('markingsplayer2') &&
     boardGameArray[3].classList.contains('markingsplayer2') &&
     boardGameArray[6].classList.contains('markingsplayer2')
   ) {
-    alert('Player 2 Wins');
+    playerTwoWins();
   } else if (
     //column 2)
     boardGameArray[1].classList.contains('markingsplayer2') &&
     boardGameArray[4].classList.contains('markingsplayer2') &&
     boardGameArray[7].classList.contains('markingsplayer2')
   ) {
-    alert('Player 2 wins');
+    playerTwoWins();
   } else if (
     // column 3)
     boardGameArray[2].classList.contains('markingsplayer2') &&
     boardGameArray[5].classList.contains('markingsplayer2') &&
     boardGameArray[8].classList.contains('markingsplayer2')
   ) {
-    alert('Player 2 wins');
+    playerTwoWins();
   } else if (
     //diagonal 1
     boardGameArray[0].classList.contains('markingsplayer2') &&
     boardGameArray[4].classList.contains('markingsplayer2') &&
     boardGameArray[8].classList.contains('markingsplayer2')
   ) {
-    alert('Player 2 wins');
+    playerTwoWins();
   } else if (
     // diagonal 2
     boardGameArray[2].classList.contains('markingsplayer2') &&
     boardGameArray[4].classList.contains('markingsplayer2') &&
     boardGameArray[6].classList.contains('markingsplayer2')
   ) {
-    alert('Player 2 wins');
+    playerTwoWins();
   } else if (generalTurnCounter === 9) {
-    alert('This is an official draw!');
+    document.querySelector('.message-board').textContent =
+      'This is an official draw. Pirates, Parlay';
   } else {
     console.log('keep on playing');
   }
