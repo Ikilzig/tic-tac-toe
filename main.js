@@ -59,6 +59,8 @@ function resetBoardForNextGame(event) {
   }
   generalTurnCounter = 0;
   document.querySelector('.message-board').textContent = "Let's do it, Pirate!";
+  document.querySelector('.player1-name').classList.remove('winner');
+  document.querySelector('.player2-name').classList.remove('winner');
 }
 
 //reset score button
@@ -71,6 +73,7 @@ function resetAllScore() {
   document.querySelector('.pointsPlayerTwo').textContent = 0;
   document.querySelector('.message-board').textContent =
     'Argg, that damn Curse!';
+  resetBoardForNextGame();
 }
 
 //winningfunctions
@@ -81,6 +84,7 @@ function playerOneWins() {
   document.querySelector('.pointsPlayerOne').textContent = playerOneWinCounter;
   document.querySelector('.message-board').textContent =
     'Guybrush Treepwood wins!';
+  document.querySelector('.player1-name').classList.add('winner');
 }
 
 function playerTwoWins() {
@@ -89,6 +93,7 @@ function playerTwoWins() {
   document.querySelector('.pointsPlayerTwo').textContent = playerTwoWinCounter;
   document.querySelector('.message-board').textContent =
     'Captain LeChuck wins!';
+  document.querySelector('.player2-name').classList.add('winner');
 }
 
 //rules for winning player 1

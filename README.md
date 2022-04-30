@@ -2,7 +2,7 @@
 
 ## Summary
 
-This is a take on the classic TIC-TAC-TOE that pays homage to one of the best video games EVER (at least of my childhood...), called
+This is a take on the classic TIC-TAC-TOE that pays homage to one of the best video game EVER (at least of my childhood...), called
 Monkey Island.
 
 [Click here to play the game.](https://ikilzig.github.io/tic-tac-toe/)

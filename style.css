@@ -3,10 +3,17 @@ body {
   justify-content: center;
   align-content: space-evenly;
   justify-items: center;
-  background: radial-gradient(rgba(43, 48, 86, 0.889), rgba(12, 17, 52, 0.889));
+  background: radial-gradient(rgba(37, 42, 80, 0.889), rgba(12, 17, 52, 0.889));
   font-family: 'Sail', cursive;
   margin: 0 auto;
 }
+
+/* #player1-avatar {
+  border-radius: 50%;
+  background-color: rgba(37, 42, 80, 0.889);
+  box-shadow: 0 0 0px 0px #fff, 0 0 100px 60px rgb(104, 58, 177),
+    0 0 40px 50px #0ff;
+} */
 
 h1 {
   text-align: center;
@@ -52,6 +59,23 @@ article {
 .player-2 {
   color: whitesmoke;
   font-size: x-large;
+}
+
+.winner {
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073,
+      0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
+      0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
 }
 
 /* .player2-avatar {
