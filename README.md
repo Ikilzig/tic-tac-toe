@@ -2,16 +2,16 @@
 
 ## Summary
 
-This is a take on the classic TIC-TAC-TOE that pays homage to one of the best video games EVER (at least, of my childhood...), called
+This is a take on the classic TIC-TAC-TOE that pays homage to one of the best video games EVER (at least of my childhood...), called
 Monkey Island.
 
-[Click here to play the game](https://ikilzig.github.io/tic-tac-toe/)
+[Click here to play the game.](https://ikilzig.github.io/tic-tac-toe/)
 
 ## Plan for solving the problem
 
 ### Plan
 
-Considering that these are my first steps, the general approach would be to first make it work, then I will try to make it look nice and, lastly, make it better.
+Considering that these are my first steps, the general approach would be first to make it work. Then I will try to make it look nice and, lastly, make it better.
 
 #### Step 1
 
@@ -22,9 +22,9 @@ Considering that these are my first steps, the general approach would be to firs
 
 2. I wrote this README.md file, which is also a great opportunity to plan the next steps.
 
-#### Step 2
+#### Step 2 - HTML wireframe.
 
-1. I began with the HTML wireframe, shown on the first image.
+1. I began with the HTML wireframe shown in the first image.
 2. Once the HTML was roughly outlined, I did some basic CSS to give it a rough visual layout.
 3. I added some pre-emptive classes and IDs for the next step.
 
@@ -48,22 +48,22 @@ I used the same principle over and over again:
 
 ### Step 4 - CSS and visuals - make it look nice
 
-Now that the prototype works, I've started polishing the visual approach. There are several things to consider here. The main one was to chose a theme, which I already: the first Monkey Island video play. Thus, the next things to complete are:
+Now that the prototype works, I've started polishing the visual approach. There are several things to consider here. The main one was to choose a theme, which I already have: the first Monkey Island video play. Thus, the next things to complete are:
 
 - ~~Find the two main characters and the game logo and edit the images to fit the page~~
 - ~~Layout a nice board and different chips for each player~~
-- Make them look good and armonious
-- Edit all the other standing elements to give a better game immersion
-- Change font style
+- ~~Make them look good and harmonious~~
+- ~~Edit all the other standing elements to give a better game immersion~~
+- ~~Change font style~~
 
 #### JS
 
-- Convert all the alerts to on screen messages. Use a tag and textContent
-- Add a reset button (and maybe another one to reload the page?)
+- Convert all the alerts to on-screen messages. Use a tag and textContent
+- ~~Add a reset button~~
 
 ### Step 5 - Add extra functionalities - Make it better
 
-- Add audio efects on each play (one for swords and one for bombs)
+- Add audio effects on each play (one for swords and one for bombs)
 - Add interaction between the players -classic Monkey Island insults). The arrays are on the js already
 - Add an initial screen
 - Add more game characters and allow player selection
@@ -88,9 +88,9 @@ Now that the prototype works, I've started polishing the visual approach. There 
 
 - Coding is hard
 - Coding is also fun (even if the code is still not working)
-- Parvus error in principio, magnus est in fine (A small error in the beginning [planning] is a big error at the end of the job)
+- Parvus error in principio, magnus est in fine (A small error at the beginning [planning] is a big error at the end of the job)
 - There are plenty of free images and image kits out there
-- You don't need to be a genious to use an online image editor
+- You don't need to be a genius to use an online image editor
 - But you always need to check a color wheel like Adobe
 - It's hard to work with colors and contrasts.
 - TBA
