@@ -154,6 +154,8 @@ function RulesForWinning() {
     boardGameArray[6].classList.contains('markingsplayer2')
   ) {
     alert('Player 2 wins');
+  } else if (generalTurnCounter === 9) {
+    alert('This is an official draw!');
   } else {
     console.log('keep on playing');
   }
