@@ -8,7 +8,8 @@ body {
   margin: 0 auto;
 }
 
-/* #player1-avatar {
+/* The idea here was to make the player's avatar shine when winning, but I decided to use the glow on the name instead
+ #player1-avatar {
   border-radius: 50%;
   background-color: rgba(37, 42, 80, 0.889);
   box-shadow: 0 0 0px 0px #fff, 0 0 100px 60px rgb(104, 58, 177),
@@ -37,6 +38,7 @@ h3 {
   margin-top: 20px;
   padding: 10px;
   border: 5px whitesmoke double;
+  border-radius: 10px;
   font-size: x-large;
 }
 
@@ -49,8 +51,27 @@ article {
   display: inline-grid;
   align-content: center;
   justify-items: center;
-  padding: 50px;
+  padding: 35px 40px 40px 40px;
 }
+
+.dialog-board {
+  display: grid;
+  height: 50px;
+  grid-template-columns: 3fr 6fr 3fr;
+  align-content: center;
+  justify-items: center;
+  color: whitesmoke;
+  font-size: larger;
+  margin-top: 30px;
+  margin-bottom: -20px;
+  padding-bottom: -10px;
+}
+
+.speech-bubble-player-1 {
+  display: grid;
+  justify-self: end;
+}
+
 .player-1 {
   color: whitesmoke;
   font-size: x-large;
@@ -59,6 +80,11 @@ article {
 .player-2 {
   color: whitesmoke;
   font-size: x-large;
+}
+
+.player2-name,
+.player1-name {
+  margin: 0px;
 }
 
 .winner {
@@ -115,10 +141,69 @@ aside {
   text-align: center;
 }
 
-.game-score {
-  text-decoration: underline;
+/* Popup container */
+.information-pop-up {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
 }
+
+/* The actual popup (appears on top) */
+.information-pop-up .popuptext {
+  visibility: hidden;
+  width: 400px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 15px 20px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: -130%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.information-pop-up .popuptext::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.information-pop-up .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 footer {
   margin: 50px;
   color: whitesmoke;
+  font-size: larger;
 }

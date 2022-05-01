@@ -7,6 +7,36 @@ var generalTurnCounter = 0;
 var boardGameArray = document.querySelectorAll('div');
 console.log(boardGameArray);
 
+// Pirate insults
+var playerOneInsultsArray = [
+  'This is the END for you, you gutter-crawling cur!',
+  "Soon you'll be wearing my sword like a shish kebab!",
+  'My handkerchief will wipe up your blood!',
+  'I once owned a dog that was smarter then you',
+  'You make me want to puke',
+  "Nobody's ever drawn blood from me",
+  'You fight like a dairy farmer',
+  'I got this scar on my face during a mighty struggle!',
+  "I've heard you were a contemptible sneak",
+  'Have you stopped wearing diapers yet?',
+  'There are no clever moves that can help you now',
+  'Now I know what filth and stupidity really are',
+];
+
+var playerTwoInsultsArray = [
+  "You're no match for my brains, you poor fool",
+  'You have the manners of a beggar',
+  "I'm not going to take your insolence sitting down!",
+  'There are no words for how disgusting you are',
+  "I've spoken with apes more polite then you",
+  'My wisest enemies run away at the first sight of me!',
+  'Only once have I met such a coward!',
+  'I hope you have a boat ready for a quick escape',
+  'Every word you say to me is stupid',
+  'You are a pain in the backside, sir!',
+  'I see people like you passed-out on tavern floors',
+];
+
 // Function that regulates players turns
 function playersTurn(event) {
   // This runs up to 9 times
@@ -22,8 +52,10 @@ function playersTurn(event) {
         generalTurnCounter++;
         document.querySelector('.message-board').textContent =
           "It is now Capitan LeChuck's turn, he throws bombs";
+        playerOneDialogEachTurn();
       }
       RulesForWinning();
+
       // console.log(generalTurnCounter); // checkpoint
     } else {
       if (squareClickedOn.tagName === 'DIV') {
@@ -35,6 +67,7 @@ function playersTurn(event) {
           generalTurnCounter++;
           document.querySelector('.message-board').textContent =
             "It is now Guybrush Treepwood's turn, he fights with swords";
+          playerTwoDialogEachTurn();
         }
       }
       RulesForWinning();
@@ -219,32 +252,32 @@ function RulesForWinning() {
   }
 }
 
-// Pirate insults
-var player1insults = [
-  'This is the END for you, you gutter-crawling cur!',
-  "Soon you'll be wearing my sword like a shish kebab!",
-  'My handkerchief will wipe up your blood!',
-  'I once owned a dog that was smarter then you',
-  'You make me want to puke',
-  "Nobody's ever drawn blood from me and nobody ever will",
-  'You fight like a dairy farmer',
-  'I got this scar on my face during a mighty struggle!',
-  "I've heard you were a contemptible sneak",
-  'Have you stopped wearing diapers yet?',
-  'There are no clever moves that can help you now',
-  'Now I know what filth and stupidity really are',
-];
+// ABOUT ME
 
-var player2Insults = [
-  "You're no match for my brains, you poor fool",
-  'You have the manners of a beggar',
-  "I'm not going to take your insolence sitting down!",
-  'There are no words for how disgusting you are',
-  "I've spoken with apes more polite then you",
-  'My wisest enemies run away at the first sight of me!',
-  'Only once have I met such a coward!',
-  'I hope you have a boat ready for a quick escape',
-  'Every word you say to me is stupid',
-  'You are a pain in the backside, sir!',
-  'I usually see people like you passed-out on tavern floors',
-];
+function aboutMePopup() {
+  var aboutMe = document.getElementById('aboutmetext');
+  aboutMe.classList.toggle('show');
+}
+
+document
+  .querySelector('.information-pop-up')
+  .addEventListener('click', aboutMePopup);
+
+//Dialog insults function
+
+function playerOneDialogEachTurn() {
+  var randomInsult = Math.floor(Math.random() * playerOneInsultsArray.length);
+  document.querySelector('.dialogs-player-1').textContent =
+    playerOneInsultsArray[randomInsult];
+  // var speechBubbleToAppear = document.querySelector(
+  //   '.speech-buuble-player-1-appear'
+  // );
+  // speechBubbleToAppear.removeAttribute('src');
+  // speechBubbleToAppear.appendChild('src')
+}
+
+function playerTwoDialogEachTurn() {
+  var randomInsult = Math.floor(Math.random() * playerTwoInsultsArray.length);
+  document.querySelector('.dialogs-player-2').textContent =
+    playerTwoInsultsArray[randomInsult];
+}

@@ -29,6 +29,17 @@
         LeChuck. Who will win?
       </h2>
       <h3 class="message-board">Welcome to Monkey Island!</h3>
+      <section class="dialog-board">
+        <h4 class="speech-bubble-player-1">
+          <!-- <img
+            src="./images/speechbubbleplayerone50px.png"
+            alt="Speech bubble"
+            class="speech-bubble-player-1-appear" -->
+          />
+        </h4>
+        <h4 class="dialogs-player-1 dialogs-player-2"></h4>
+        <h4 class="dialogs-bubble-player-2"></h4>
+      </section>
       <section>
         <article class="player-1">
           <img
@@ -37,6 +48,9 @@
             id="player1-avatar"
           />
           <p class="player1-name">Guybrush Treepwood</p>
+          <p class="player-info">
+            Score: <span class="pointsPlayerOne">0</span>
+          </p>
         </article>
         <article class="board">
           <div></div>
@@ -56,25 +70,26 @@
             class="player2-avatar"
           />
           <p class="player2-name">Captain LeChuck</p>
+          <p class="player-info">
+            Score: <span class="pointsPlayerTwo">0</span>
+          </p>
         </article>
       </section>
       <aside>
         <button class="reset-button">Argg!, play again</button>
-        <p class="game-score">Game score</p>
-        <p>
-          <span class="score-player1">Guybrush Treepwood: </span>
-          <span class="pointsPlayerOne">0</span>
-        </p>
-        <p>
-          <span class="score-player2">Captain LeChuck: </span
-          ><span class="pointsPlayerTwo">0</span>
-        </p>
         <button class="reset-score-button">Reset score counter</button>
       </aside>
     </main>
     <footer>
-      Disclaimer: I do not own the characters images or the Monkey Island logo.
-      All rights reserved to their respective owners.
+      <p class="information-pop-up">
+        About me!
+        <span class="popuptext" id="aboutmetext"
+          >This is a Tic-Tac-Toe Monkey Island inspired game. Guybrush goes
+          first, LeChuck goes second. Disclaimer: I do not own the characters
+          images or the Monkey Island logo. All rights reserved to their
+          respective owners. Don't forget to visit my GitHub Repo!
+        </span>
+      </p>
     </footer>
   </body>
 </html>
