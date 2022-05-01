@@ -53,6 +53,7 @@ function playersTurn(event) {
           !squareClickedOn.classList.contains('markingsplayer2')
         )
           squareClickedOn.classList.add('markingsplayer1');
+        document.querySelector('.swords-player-one').play();
         generalTurnCounter++;
         document.querySelector('.message-board').textContent =
           "It is now Capitan LeChuck's turn, he throws bombs";
@@ -68,6 +69,7 @@ function playersTurn(event) {
           !squareClickedOn.classList.contains('markingsplayer2')
         ) {
           squareClickedOn.classList.add('markingsplayer2');
+          document.querySelector('.bomb-player-two').play();
           generalTurnCounter++;
           document.querySelector('.message-board').textContent =
             "It is now Guybrush Treepwood's turn, he fights with swords";
