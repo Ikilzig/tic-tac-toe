@@ -14,13 +14,14 @@
       rel="stylesheet"
     />
   </head>
-  <body>
-    <audio class="swords-player-one">
+  <body>    
+    <audio muted class="swords-audio" id="audio">
       <source src="./audio/sword.mp3" />
     </audio>
-    <audio class="bomb-player-two">
+    <audio muted class="bomb-audio" id="audio">
       <source src="./audio/explosion.mp3" />
     </audio>
+    <audio muted class="win-audio" id="audio"><source src="./audio/win.mp3" /></audio>
     <main>
       <h1>
         <img
@@ -90,6 +91,7 @@
         <h3 class="message-board">Welcome to Monkey Island!</h3>
         <button class="reset-button">Argg!, play again</button>
         <button class="reset-score-button">Reset score counter</button>
+        <button class="mute" id="mutedd">Audio on/off</button>
       </aside>
     </main>
     <footer>
@@ -99,9 +101,11 @@
           >This is a Tic-Tac-Toe Monkey Island inspired game. Guybrush goes
           first, LeChuck goes second. Disclaimer: I do not own the characters
           images or the Monkey Island logo. All rights reserved to their
-          respective owners. Don't forget to visit my GitHub Repo!
+          respective owners. You can enjoy the original game at <a href="https://playold.games/play-game/the-secret-of-monkey-island/play/">here.</a>
+          Don't forget to visit my GitHub Repo!
         </span>
       </p>
     </footer>
+  </div>
   </body>
 </html>

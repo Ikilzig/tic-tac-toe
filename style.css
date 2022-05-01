@@ -1,3 +1,6 @@
+a {
+  color: whitesmoke;
+}
 body {
   display: grid;
   justify-content: center;
@@ -6,6 +9,7 @@ body {
   background: radial-gradient(rgba(37, 42, 80, 0.889), rgba(12, 17, 52, 0.889));
   font-family: 'Sail', cursive;
   margin: 0 auto;
+  cursor: crosshair;
 }
 
 /* The idea here was to make the player's avatar shine when winning, but I decided to use the glow on the name instead
@@ -103,6 +107,10 @@ article {
 .player2-name,
 .player1-name {
   margin: 0px;
+}
+
+.player-info {
+  margin-top: 10px;
 }
 
 .winner {

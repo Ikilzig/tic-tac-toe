@@ -7,6 +7,26 @@ var generalTurnCounter = 0;
 var boardGameArray = document.querySelectorAll('div');
 console.log(boardGameArray);
 
+//mute audio
+var audioMute = document.querySelectorAll('#audio');
+function muteAudio() {
+  for (i = 0; i < audioMute.length; i++) {
+    if (audioMute[i].muted) {
+      audioMute[i].muted = false;
+    } else {
+      audioMute[i].muted = true;
+    }
+  }
+
+  //   // document.querySelectorAll('#audio').muted = true;
+  // } else {
+  //   document.querySelectorAll('#audio').muted = false;
+  // }
+  // console.log('hola');
+  // console.log(audioMute);
+}
+document.querySelector('.mute').addEventListener('click', muteAudio, false);
+
 // Starting conditions
 speechBubblePlayerOneDisappar();
 speechBubblePlayerTwoDisappar();
@@ -53,7 +73,7 @@ function playersTurn(event) {
           !squareClickedOn.classList.contains('markingsplayer2')
         )
           squareClickedOn.classList.add('markingsplayer1');
-        document.querySelector('.swords-player-one').play();
+        document.querySelector('.swords-audio').play();
         generalTurnCounter++;
         document.querySelector('.message-board').textContent =
           "It is now Capitan LeChuck's turn, he throws bombs";
@@ -69,7 +89,7 @@ function playersTurn(event) {
           !squareClickedOn.classList.contains('markingsplayer2')
         ) {
           squareClickedOn.classList.add('markingsplayer2');
-          document.querySelector('.bomb-player-two').play();
+          document.querySelector('.bomb-audio').play();
           generalTurnCounter++;
           document.querySelector('.message-board').textContent =
             "It is now Guybrush Treepwood's turn, he fights with swords";
@@ -131,6 +151,7 @@ function playerOneWins() {
   document.querySelector('.pointsPlayerOne').textContent = playerOneWinCounter;
   document.querySelector('.message-board').textContent =
     'Guybrush Treepwood wins!';
+  document.querySelector('.win-audio').play();
   document.querySelector('.player1-name').classList.add('winner');
   speechBubblePlayerOneDisappar();
 }
@@ -141,6 +162,7 @@ function playerTwoWins() {
   document.querySelector('.pointsPlayerTwo').textContent = playerTwoWinCounter;
   document.querySelector('.message-board').textContent =
     'Captain LeChuck wins!';
+  document.querySelector('.win-audio').play();
   document.querySelector('.player2-name').classList.add('winner');
   speechBubblePlayerTwoDisappar();
 }
