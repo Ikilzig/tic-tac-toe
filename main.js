@@ -100,6 +100,8 @@ function resetBoardForNextGame(event) {
   document.querySelector('.player2-name').classList.remove('winner');
   speechBubblePlayerOneDisappar();
   speechBubblePlayerTwoDisappar();
+  document.querySelector('.dialogs-player-1').textContent = ' ';
+  document.querySelector('.dialogs-player-2').textContent = ' ';
 }
 
 //reset score button
@@ -111,10 +113,12 @@ function resetAllScore() {
   document.querySelector('.pointsPlayerOne').textContent = 0;
   document.querySelector('.pointsPlayerTwo').textContent = 0;
   document.querySelector('.message-board').textContent =
-    'Argg, that damn Curse!';
+    'Argg, that damn Monkey Curse!';
   resetBoardForNextGame();
   speechBubblePlayerOneDisappar();
   speechBubblePlayerTwoDisappar();
+  document.querySelector('.dialogs-player-1').textContent = ' ';
+  document.querySelector('.dialogs-player-2').textContent = ' ';
 }
 
 //winningfunctions
@@ -302,7 +306,7 @@ function speechBubblePlayerTwoDisappar() {
   speechBubbleToAppear.classList.add('speech-disappear');
 }
 
-//function bibble appear
+//function bubble appear
 function speechBubblePlayerOneAppear() {
   var speechBubbleToAppear = document.querySelector('#speech-player-one');
   speechBubbleToAppear.classList.remove('speech-disappear');
