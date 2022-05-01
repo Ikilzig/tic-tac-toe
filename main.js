@@ -13,8 +13,10 @@ function muteAudio() {
   for (i = 0; i < audioMute.length; i++) {
     if (audioMute[i].muted) {
       audioMute[i].muted = false;
+      document.querySelector('.mute').textContent = 'Audio On';
     } else {
       audioMute[i].muted = true;
+      document.querySelector('.mute').textContent = 'Audio Off';
     }
   }
 
