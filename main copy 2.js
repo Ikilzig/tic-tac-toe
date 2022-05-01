@@ -7,10 +7,6 @@ var generalTurnCounter = 0;
 var boardGameArray = document.querySelectorAll('div');
 console.log(boardGameArray);
 
-// Starting conditions
-speechBubblePlayerOneDisappar();
-speechBubblePlayerTwoDisappar();
-
 // Pirate insults
 var playerOneInsultsArray = [
   'This is the END for you, you gutter-crawling cur!',
@@ -98,8 +94,6 @@ function resetBoardForNextGame(event) {
   document.querySelector('.message-board').textContent = "Let's do it, Pirate!";
   document.querySelector('.player1-name').classList.remove('winner');
   document.querySelector('.player2-name').classList.remove('winner');
-  speechBubblePlayerOneDisappar();
-  speechBubblePlayerTwoDisappar();
 }
 
 //reset score button
@@ -113,8 +107,6 @@ function resetAllScore() {
   document.querySelector('.message-board').textContent =
     'Argg, that damn Curse!';
   resetBoardForNextGame();
-  speechBubblePlayerOneDisappar();
-  speechBubblePlayerTwoDisappar();
 }
 
 //winningfunctions
@@ -126,7 +118,6 @@ function playerOneWins() {
   document.querySelector('.message-board').textContent =
     'Guybrush Treepwood wins!';
   document.querySelector('.player1-name').classList.add('winner');
-  speechBubblePlayerOneDisappar();
 }
 
 function playerTwoWins() {
@@ -136,7 +127,6 @@ function playerTwoWins() {
   document.querySelector('.message-board').textContent =
     'Captain LeChuck wins!';
   document.querySelector('.player2-name').classList.add('winner');
-  speechBubblePlayerTwoDisappar();
 }
 
 //rules for winning player 1
@@ -256,7 +246,7 @@ function RulesForWinning() {
     playerTwoWins();
   } else if (generalTurnCounter === 9) {
     document.querySelector('.message-board').textContent =
-      'This is a draw. Pirates... parlay!';
+      'This is an official draw. Pirates, Parlay';
   } else {
     console.log('keep on playing');
   }
@@ -279,36 +269,16 @@ function playerOneDialogEachTurn() {
   var randomInsult = Math.floor(Math.random() * playerOneInsultsArray.length);
   document.querySelector('.dialogs-player-1').textContent =
     playerOneInsultsArray[randomInsult];
-  speechBubblePlayerOneAppear();
-  speechBubblePlayerTwoDisappar();
 }
+
+function speechBubblePlayerOneDisappar {}
 
 function playerTwoDialogEachTurn() {
   var randomInsult = Math.floor(Math.random() * playerTwoInsultsArray.length);
   document.querySelector('.dialogs-player-2').textContent =
     playerTwoInsultsArray[randomInsult];
-  speechBubblePlayerTwoAppear();
-  speechBubblePlayerOneDisappar();
+  var speechBubbleToAppear = document.querySelector('#speech-player-one');
+  speechBubbleToAppear.classList.add('speech-disappear');
 }
 
 // speech bubble dissapear
-function speechBubblePlayerOneDisappar() {
-  var speechBubbleToAppear = document.querySelector('#speech-player-one');
-  speechBubbleToAppear.classList.add('speech-disappear');
-}
-
-function speechBubblePlayerTwoDisappar() {
-  var speechBubbleToAppear = document.querySelector('#speech-player-two');
-  speechBubbleToAppear.classList.add('speech-disappear');
-}
-
-//function bibble appear
-function speechBubblePlayerOneAppear() {
-  var speechBubbleToAppear = document.querySelector('#speech-player-one');
-  speechBubbleToAppear.classList.remove('speech-disappear');
-}
-
-function speechBubblePlayerTwoAppear() {
-  var speechBubbleToAppear = document.querySelector('#speech-player-two');
-  speechBubbleToAppear.classList.remove('speech-disappear');
-}

@@ -72,6 +72,19 @@ article {
   justify-self: end;
 }
 
+.speech-bubble-player-2 {
+  display: grid;
+  justify-self: start;
+}
+
+.speech-disappear {
+  display: none;
+}
+
+.speech-appear {
+  display: contents;
+}
+
 .player-1 {
   color: whitesmoke;
   font-size: x-large;
