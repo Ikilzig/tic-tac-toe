@@ -65,9 +65,10 @@ Now that the prototype works, I've started polishing the visual approach. There 
 
 ### Step 5 - Add extra functionalities - Make it better
 
-- Add audio effects on each play (one for swords and one for bombs)
-- Add interaction between the players -classic Monkey Island insults). The arrays are on the js already
+- ~~Add audio effects on each play (one for swords and one for bombs)~
+- ~~Add interaction between the players -classic Monkey Island insults). The arrays are on the js already~~
 - Add an initial screen
+- intro and winning music
 - Add more game characters and allow player selection
 - LocalStorage or SessionStorage?
 - Finally...
