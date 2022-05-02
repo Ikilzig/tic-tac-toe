@@ -1,0 +1,235 @@
+a {
+  color: whitesmoke;
+}
+body {
+  display: grid;
+  justify-content: center;
+  align-content: space-evenly;
+  justify-items: center;
+  background: radial-gradient(rgba(37, 42, 80, 0.889), rgba(12, 17, 52, 0.889));
+  font-family: 'Sail', cursive;
+  margin: 0 auto;
+  cursor: crosshair;
+}
+
+/* The idea here was to make the player's avatar shine when winning, but I decided to use the glow on the name instead
+ #player-one-avatar {
+  border-radius: 50%;
+  background-color: rgba(37, 42, 80, 0.889);
+  box-shadow: 0 0 0px 0px #fff, 0 0 100px 60px rgb(104, 58, 177),
+    0 0 40px 50px #0ff;
+} */
+
+h1 {
+  text-align: center;
+  margin-left: 75px;
+}
+
+.logo {
+  max-width: 600px;
+  text-align: center;
+}
+
+h2,
+h3 {
+  text-align: center;
+  max-width: 600px;
+  margin: auto;
+  color: whitesmoke;
+}
+
+h2 {
+  border-bottom: 1px solid whitesmoke;
+  padding-bottom: 10px;
+}
+
+h3 {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 5px whitesmoke double;
+  border-radius: 10px;
+  font-size: x-large;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+}
+
+article {
+  display: inline-grid;
+  align-content: center;
+  justify-items: center;
+  padding: 35px 40px 40px 40px;
+}
+
+.dialog-board {
+  display: grid;
+  height: 50px;
+  grid-template-columns: 3fr 6fr 3fr;
+  align-content: center;
+  justify-items: center;
+  color: whitesmoke;
+  font-size: larger;
+  margin-top: 30px;
+  margin-bottom: -20px;
+  padding-bottom: -10px;
+}
+
+.speech-bubble-player-one {
+  display: grid;
+  justify-self: end;
+}
+
+.speech-bubble-player-two {
+  display: grid;
+  justify-self: start;
+}
+
+.speech-disappear {
+  display: none;
+}
+
+.speech-appear {
+  display: contents;
+}
+
+.player-one {
+  color: whitesmoke;
+  font-size: x-large;
+}
+
+.player-two {
+  color: whitesmoke;
+  font-size: x-large;
+}
+
+.player-two-name,
+.player-one-name {
+  margin: 0px;
+}
+
+.player-info {
+  margin-top: 10px;
+}
+
+.winner {
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073,
+      0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
+      0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+/* .player2-avatar {
+} */
+
+.markings-player-one {
+  background-image: url('./images/crossespixelated75px2.png');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.markings-player-two {
+  background-image: url('./images/bombpixelated75px.png');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.board {
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+  column-gap: 15px;
+  row-gap: 15px;
+  background-image: url(./images/game-board.png);
+  background-size: 410px;
+  background-position: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+}
+div {
+  border: 0px;
+  height: 100px;
+  width: 100px;
+}
+
+aside {
+  color: whitesmoke;
+  text-align: center;
+}
+
+/* Popup container */
+.information-pop-up {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.information-pop-up .popuptext {
+  visibility: hidden;
+  width: 400px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 15px 20px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: -130%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.information-pop-up .popuptext::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.information-pop-up .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+footer {
+  margin: 50px;
+  color: whitesmoke;
+  font-size: larger;
+}

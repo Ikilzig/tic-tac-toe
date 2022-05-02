@@ -1,11 +1,13 @@
 // general counters
-var playerOneWinCounter = localStorage.getItem('persistentScorePlayerOne');
-var playerTwoWinCounter = localStorage.getItem('persistentScorePlayerTwo');
+var playerOneWinCounter = 0;
+var playerTwoWinCounter = 0;
 var generalTurnCounter = 0;
 
 // general variables
 var boardGameArray = document.querySelectorAll('div');
 console.log(boardGameArray);
+
+pointsStorage = window.localStorage;
 
 //mute audio
 var audioMute = document.querySelectorAll('#audio');
@@ -19,26 +21,19 @@ function muteAudio() {
       document.querySelector('.mute').textContent = 'Audio Off';
     }
   }
+
+  //   // document.querySelectorAll('#audio').muted = true;
+  // } else {
+  //   document.querySelectorAll('#audio').muted = false;
+  // }
+  // console.log('hola');
+  // console.log(audioMute);
 }
 document.querySelector('.mute').addEventListener('click', muteAudio, false);
 
 // Starting conditions
 speechBubblePlayerOneDisappar();
 speechBubblePlayerTwoDisappar();
-
-if (playerOneWinCounter !== 0) {
-  document.querySelector('.points-player-one').textContent =
-    playerOneWinCounter;
-} else {
-  document.querySelector('.points-player-one').textContent = '0';
-}
-
-if (playerTwoWinCounter !== 0) {
-  document.querySelector('.points-player-two').textContent =
-    playerTwoWinCounter;
-} else {
-  document.querySelector('.points-player-two').textContent = '0';
-}
 
 // Pirate insults
 var playerOneInsultsArray = [
@@ -109,13 +104,13 @@ function playersTurn(event) {
       // console.log(generalTurnCounter); // checkpoint
     }
   } else {
-    alert('The game is over! Click on Play again to.. play again');
+    alert('The game is over!');
   }
 }
 // players playing
 document.querySelector('.board').addEventListener('click', playersTurn);
 
-//reset button play again
+//reset button
 document
   .querySelector('.reset-button')
   .addEventListener('click', resetBoardForNextGame);
@@ -150,17 +145,12 @@ function resetAllScore() {
   speechBubblePlayerTwoDisappar();
   document.querySelector('.dialogs-player-one').textContent = ' ';
   document.querySelector('.dialogs-player-two').textContent = ' ';
-  localStorage.setItem('persistentScorePlayerTwo', 0);
-  localStorage.setItem('persistentScorePlayerOne', 0);
-  playerOneWinCounter = 0;
-  playerTwoWinCounter = 0;
 }
 
 //winningfunctions
 
 function playerOneWins() {
   playerOneWinCounter++;
-  localStorage.setItem('persistentScorePlayerOne', playerOneWinCounter);
   generalTurnCounter = generalTurnCounter + boardGameArray.length;
   document.querySelector('.points-player-one').textContent =
     playerOneWinCounter;
@@ -174,7 +164,6 @@ function playerOneWins() {
 
 function playerTwoWins() {
   playerTwoWinCounter++;
-  localStorage.setItem('persistentScorePlayerTwo', playerTwoWinCounter);
   generalTurnCounter = generalTurnCounter + boardGameArray.length;
   document.querySelector('.points-player-two').textContent =
     playerTwoWinCounter;
