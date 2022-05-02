@@ -87,7 +87,12 @@ Now that the prototype works, I've started polishing the visual approach. There 
 - JavaScript
 - Image editors
 - Adobe Color wheel
-- TBA
+
+Cool things (from a beginner point of view) used:
+
+- localStorage
+- CSS effects
+- Audio
 
 ## Lessons learned
 
