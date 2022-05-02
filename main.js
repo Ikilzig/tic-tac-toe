@@ -51,7 +51,7 @@ function gameStart() {
   document.querySelector('.intro-audio').play();
 }
 
-//Start message if false, remove class that removes it
+//Start message if false, remove class that removes it - NOT WORKING
 function start() {
   if (localStorage.getItem('startScreenCondition') === 'on') {
     document.querySelector('.initial-hello').classList.remove('fade-out-image');
@@ -98,6 +98,7 @@ function resetAllScore() {
   playerOneWinCounter = 0;
   playerTwoWinCounter = 0;
   localStorage.setItem('startScreenCondition', 'off');
+  document.querySelector('.initial-hello').classList.remove('fade-out-image');
 }
 // MUTE AUDIO ///
 var audioMute = document.querySelectorAll('#audio');
