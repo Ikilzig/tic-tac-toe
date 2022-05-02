@@ -71,10 +71,10 @@ function playersTurn(event) {
     if (generalTurnCounter % 2 == 0) {
       if (squareClickedOn.tagName === 'DIV') {
         if (
-          !squareClickedOn.classList.contains('markingsplayer1') &&
-          !squareClickedOn.classList.contains('markingsplayer2')
+          !squareClickedOn.classList.contains('markings-player-one') &&
+          !squareClickedOn.classList.contains('markings-player-two')
         )
-          squareClickedOn.classList.add('markingsplayer1');
+          squareClickedOn.classList.add('markings-player-one');
         document.querySelector('.swords-audio').play();
         generalTurnCounter++;
         document.querySelector('.message-board').textContent =
@@ -87,10 +87,10 @@ function playersTurn(event) {
     } else {
       if (squareClickedOn.tagName === 'DIV') {
         if (
-          !squareClickedOn.classList.contains('markingsplayer1') &&
-          !squareClickedOn.classList.contains('markingsplayer2')
+          !squareClickedOn.classList.contains('markings-player-one') &&
+          !squareClickedOn.classList.contains('markings-player-two')
         ) {
-          squareClickedOn.classList.add('markingsplayer2');
+          squareClickedOn.classList.add('markings-player-two');
           document.querySelector('.bomb-audio').play();
           generalTurnCounter++;
           document.querySelector('.message-board').textContent =
@@ -115,17 +115,17 @@ document
 
 function resetBoardForNextGame(event) {
   for (i = 0; i < boardGameArray.length; i++) {
-    boardGameArray[i].classList.remove('markingsplayer1');
-    boardGameArray[i].classList.remove('markingsplayer2');
+    boardGameArray[i].classList.remove('markings-player-one');
+    boardGameArray[i].classList.remove('markings-player-two');
   }
   generalTurnCounter = 0;
   document.querySelector('.message-board').textContent = "Let's do it, Pirate!";
-  document.querySelector('.player1-name').classList.remove('winner');
-  document.querySelector('.player2-name').classList.remove('winner');
+  document.querySelector('.player-one-name').classList.remove('winner');
+  document.querySelector('.player-two-name').classList.remove('winner');
   speechBubblePlayerOneDisappar();
   speechBubblePlayerTwoDisappar();
-  document.querySelector('.dialogs-player-1').textContent = ' ';
-  document.querySelector('.dialogs-player-2').textContent = ' ';
+  document.querySelector('.dialogs-player-one').textContent = ' ';
+  document.querySelector('.dialogs-player-two').textContent = ' ';
 }
 
 //reset score button
@@ -141,8 +141,8 @@ function resetAllScore() {
   resetBoardForNextGame();
   speechBubblePlayerOneDisappar();
   speechBubblePlayerTwoDisappar();
-  document.querySelector('.dialogs-player-1').textContent = ' ';
-  document.querySelector('.dialogs-player-2').textContent = ' ';
+  document.querySelector('.dialogs-player-one').textContent = ' ';
+  document.querySelector('.dialogs-player-two').textContent = ' ';
 }
 
 //winningfunctions
@@ -154,8 +154,9 @@ function playerOneWins() {
   document.querySelector('.message-board').textContent =
     'Guybrush Treepwood wins!';
   document.querySelector('.win-audio').play();
-  document.querySelector('.player1-name').classList.add('winner');
+  document.querySelector('.player-one-name').classList.add('winner');
   speechBubblePlayerOneDisappar();
+  document.querySelector('.dialogs-player-one').textContent = ' ';
 }
 
 function playerTwoWins() {
@@ -165,123 +166,124 @@ function playerTwoWins() {
   document.querySelector('.message-board').textContent =
     'Captain LeChuck wins!';
   document.querySelector('.win-audio').play();
-  document.querySelector('.player2-name').classList.add('winner');
+  document.querySelector('.player-two-name').classList.add('winner');
   speechBubblePlayerTwoDisappar();
+  document.querySelector('.dialogs-player-two').textContent = ' ';
 }
 
 //rules for winning player 1
 // conditions for winning row 1
 function RulesForWinning() {
   if (
-    boardGameArray[0].classList.contains('markingsplayer1') &&
-    boardGameArray[1].classList.contains('markingsplayer1') &&
-    boardGameArray[2].classList.contains('markingsplayer1')
+    boardGameArray[0].classList.contains('markings-player-one') &&
+    boardGameArray[1].classList.contains('markings-player-one') &&
+    boardGameArray[2].classList.contains('markings-player-one')
   ) {
     playerOneWins();
   } else if (
     //row 2
-    boardGameArray[3].classList.contains('markingsplayer1') &&
-    boardGameArray[4].classList.contains('markingsplayer1') &&
-    boardGameArray[5].classList.contains('markingsplayer1')
+    boardGameArray[3].classList.contains('markings-player-one') &&
+    boardGameArray[4].classList.contains('markings-player-one') &&
+    boardGameArray[5].classList.contains('markings-player-one')
   ) {
     playerOneWins();
   } else if (
     // row 3
-    boardGameArray[6].classList.contains('markingsplayer1') &&
-    boardGameArray[7].classList.contains('markingsplayer1') &&
-    boardGameArray[8].classList.contains('markingsplayer1')
+    boardGameArray[6].classList.contains('markings-player-one') &&
+    boardGameArray[7].classList.contains('markings-player-one') &&
+    boardGameArray[8].classList.contains('markings-player-one')
   ) {
     playerOneWins();
   } else if (
     //column 1
-    boardGameArray[0].classList.contains('markingsplayer1') &&
-    boardGameArray[3].classList.contains('markingsplayer1') &&
-    boardGameArray[6].classList.contains('markingsplayer1')
+    boardGameArray[0].classList.contains('markings-player-one') &&
+    boardGameArray[3].classList.contains('markings-player-one') &&
+    boardGameArray[6].classList.contains('markings-player-one')
   ) {
     playerOneWins();
   } else if (
     //column 2)
-    boardGameArray[1].classList.contains('markingsplayer1') &&
-    boardGameArray[4].classList.contains('markingsplayer1') &&
-    boardGameArray[7].classList.contains('markingsplayer1')
+    boardGameArray[1].classList.contains('markings-player-one') &&
+    boardGameArray[4].classList.contains('markings-player-one') &&
+    boardGameArray[7].classList.contains('markings-player-one')
   ) {
     playerOneWins();
   } else if (
     // column 3)
-    boardGameArray[2].classList.contains('markingsplayer1') &&
-    boardGameArray[5].classList.contains('markingsplayer1') &&
-    boardGameArray[8].classList.contains('markingsplayer1')
+    boardGameArray[2].classList.contains('markings-player-one') &&
+    boardGameArray[5].classList.contains('markings-player-one') &&
+    boardGameArray[8].classList.contains('markings-player-one')
   ) {
     playerOneWins();
   } else if (
     //diagonal 1
-    boardGameArray[0].classList.contains('markingsplayer1') &&
-    boardGameArray[4].classList.contains('markingsplayer1') &&
-    boardGameArray[8].classList.contains('markingsplayer1')
+    boardGameArray[0].classList.contains('markings-player-one') &&
+    boardGameArray[4].classList.contains('markings-player-one') &&
+    boardGameArray[8].classList.contains('markings-player-one')
   ) {
     playerOneWins();
   } else if (
     // diagonal 2
-    boardGameArray[2].classList.contains('markingsplayer1') &&
-    boardGameArray[4].classList.contains('markingsplayer1') &&
-    boardGameArray[6].classList.contains('markingsplayer1')
+    boardGameArray[2].classList.contains('markings-player-one') &&
+    boardGameArray[4].classList.contains('markings-player-one') &&
+    boardGameArray[6].classList.contains('markings-player-one')
   ) {
     playerOneWins();
   } else if (
     // Player 2
     //row 1
-    boardGameArray[0].classList.contains('markingsplayer2') &&
-    boardGameArray[1].classList.contains('markingsplayer2') &&
-    boardGameArray[2].classList.contains('markingsplayer2')
+    boardGameArray[0].classList.contains('markings-player-two') &&
+    boardGameArray[1].classList.contains('markings-player-two') &&
+    boardGameArray[2].classList.contains('markings-player-two')
   ) {
     playerTwoWins();
   } else if (
     //row 2
-    boardGameArray[3].classList.contains('markingsplayer2') &&
-    boardGameArray[4].classList.contains('markingsplayer2') &&
-    boardGameArray[5].classList.contains('markingsplayer2')
+    boardGameArray[3].classList.contains('markings-player-two') &&
+    boardGameArray[4].classList.contains('markings-player-two') &&
+    boardGameArray[5].classList.contains('markings-player-two')
   ) {
     playerTwoWins();
   } else if (
     // row 3
-    boardGameArray[6].classList.contains('markingsplayer2') &&
-    boardGameArray[7].classList.contains('markingsplayer2') &&
-    boardGameArray[8].classList.contains('markingsplayer2')
+    boardGameArray[6].classList.contains('markings-player-two') &&
+    boardGameArray[7].classList.contains('markings-player-two') &&
+    boardGameArray[8].classList.contains('markings-player-two')
   ) {
     playerTwoWins();
   } else if (
     //column 1
-    boardGameArray[0].classList.contains('markingsplayer2') &&
-    boardGameArray[3].classList.contains('markingsplayer2') &&
-    boardGameArray[6].classList.contains('markingsplayer2')
+    boardGameArray[0].classList.contains('markings-player-two') &&
+    boardGameArray[3].classList.contains('markings-player-two') &&
+    boardGameArray[6].classList.contains('markings-player-two')
   ) {
     playerTwoWins();
   } else if (
     //column 2)
-    boardGameArray[1].classList.contains('markingsplayer2') &&
-    boardGameArray[4].classList.contains('markingsplayer2') &&
-    boardGameArray[7].classList.contains('markingsplayer2')
+    boardGameArray[1].classList.contains('markings-player-two') &&
+    boardGameArray[4].classList.contains('markings-player-two') &&
+    boardGameArray[7].classList.contains('markings-player-two')
   ) {
     playerTwoWins();
   } else if (
     // column 3)
-    boardGameArray[2].classList.contains('markingsplayer2') &&
-    boardGameArray[5].classList.contains('markingsplayer2') &&
-    boardGameArray[8].classList.contains('markingsplayer2')
+    boardGameArray[2].classList.contains('markings-player-two') &&
+    boardGameArray[5].classList.contains('markings-player-two') &&
+    boardGameArray[8].classList.contains('markings-player-two')
   ) {
     playerTwoWins();
   } else if (
     //diagonal 1
-    boardGameArray[0].classList.contains('markingsplayer2') &&
-    boardGameArray[4].classList.contains('markingsplayer2') &&
-    boardGameArray[8].classList.contains('markingsplayer2')
+    boardGameArray[0].classList.contains('markings-player-two') &&
+    boardGameArray[4].classList.contains('markings-player-two') &&
+    boardGameArray[8].classList.contains('markings-player-two')
   ) {
     playerTwoWins();
   } else if (
     // diagonal 2
-    boardGameArray[2].classList.contains('markingsplayer2') &&
-    boardGameArray[4].classList.contains('markingsplayer2') &&
-    boardGameArray[6].classList.contains('markingsplayer2')
+    boardGameArray[2].classList.contains('markings-player-two') &&
+    boardGameArray[4].classList.contains('markings-player-two') &&
+    boardGameArray[6].classList.contains('markings-player-two')
   ) {
     playerTwoWins();
   } else if (generalTurnCounter === 9) {
@@ -307,7 +309,7 @@ document
 
 function playerOneDialogEachTurn() {
   var randomInsult = Math.floor(Math.random() * playerOneInsultsArray.length);
-  document.querySelector('.dialogs-player-1').textContent =
+  document.querySelector('.dialogs-player-one').textContent =
     playerOneInsultsArray[randomInsult];
   speechBubblePlayerOneAppear();
   speechBubblePlayerTwoDisappar();
@@ -315,7 +317,7 @@ function playerOneDialogEachTurn() {
 
 function playerTwoDialogEachTurn() {
   var randomInsult = Math.floor(Math.random() * playerTwoInsultsArray.length);
-  document.querySelector('.dialogs-player-2').textContent =
+  document.querySelector('.dialogs-player-two').textContent =
     playerTwoInsultsArray[randomInsult];
   speechBubblePlayerTwoAppear();
   speechBubblePlayerOneDisappar();

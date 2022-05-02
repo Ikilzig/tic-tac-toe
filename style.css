@@ -13,7 +13,7 @@ body {
 }
 
 /* The idea here was to make the player's avatar shine when winning, but I decided to use the glow on the name instead
- #player1-avatar {
+ #player-one-avatar {
   border-radius: 50%;
   background-color: rgba(37, 42, 80, 0.889);
   box-shadow: 0 0 0px 0px #fff, 0 0 100px 60px rgb(104, 58, 177),
@@ -76,12 +76,12 @@ article {
   padding-bottom: -10px;
 }
 
-.speech-bubble-player-1 {
+.speech-bubble-player-one {
   display: grid;
   justify-self: end;
 }
 
-.speech-bubble-player-2 {
+.speech-bubble-player-two {
   display: grid;
   justify-self: start;
 }
@@ -94,18 +94,18 @@ article {
   display: contents;
 }
 
-.player-1 {
+.player-one {
   color: whitesmoke;
   font-size: x-large;
 }
 
-.player-2 {
+.player-two {
   color: whitesmoke;
   font-size: x-large;
 }
 
-.player2-name,
-.player1-name {
+.player-two-name,
+.player-one-name {
   margin: 0px;
 }
 
@@ -133,13 +133,13 @@ article {
 /* .player2-avatar {
 } */
 
-.markingsplayer1 {
+.markings-player-one {
   background-image: url('./images/crossespixelated75px2.png');
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.markingsplayer2 {
+.markings-player-two {
   background-image: url('./images/bombpixelated75px.png');
   background-position: center;
   background-repeat: no-repeat;

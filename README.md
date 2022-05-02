@@ -67,18 +67,18 @@ Now that the prototype works, I've started polishing the visual approach. There 
 
 - ~~Add audio effects on each play (one for swords and one for bombs)~
 - ~~Add interaction between the players -classic Monkey Island insults). The arrays are on the js already~~
-- Add an initial screen
-- intro and winning music
-- Add more game characters and allow player selection
-- LocalStorage or SessionStorage?
-- Finally...
 
 ==Things to work out==
 
-- ...
+- Add an initial screen, something like this: https://css-tricks.com/creating-css-sliding-door-effect/
+- intro and winning music (source https://scummbar.com/resources/downloads/index.php?todo=MP3)
+- Add more game characters and allow player selection
+- LocalStorage or SessionStorage?
+- Other cool stuff, like cleaning the code
 
 ## Tech used
 
+- Amazing search engines
 - GitHub
 - HTML
 - CSS
@@ -96,7 +96,6 @@ Now that the prototype works, I've started polishing the visual approach. There 
 - You don't need to be a genius to use an online image editor
 - But you always need to check a color wheel like Adobe
 - It's hard to work with colors and contrasts.
-- TBA
-  Monkey Island
+- ==That there is a balance between it works and make it better, and between adding new functionalities and redesign the whole thing to fit them.==
 
 <a href="https://ikilzig.github.io/tic-tac-toe/" target="_blank">Click here to play the game</a>
