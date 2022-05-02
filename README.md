@@ -5,6 +5,8 @@
 This is a take on the classic TIC-TAC-TOE that pays homage to one of the best video game EVER (at least of my childhood...), called
 Monkey Island.
 
+It was build as the 1st Project (3rd week) of the General Assembly Software Engineer Inmersive, 12 week course, in May 2022.
+
 [Click here to play the game.](https://ikilzig.github.io/tic-tac-toe/)
 
 (The game is optmized for a minimum width of 1024px)
@@ -69,14 +71,15 @@ Now that the prototype works, I've started polishing the visual approach. There 
 
 - ~~Add audio effects on each play (one for swords and one for bombs)~
 - ~~Add interaction between the players -classic Monkey Island insults). The arrays are on the js already~~
+- ~~Add an initial screen, as overlay with a transition~~
+- ~~intro and winning music~~(source https://scummbar.com/resources/downloads/index.php?todo=MP3) -~~LocalStorage for points~~
 
 ==Things to work out==
 
-- Add an initial screen, something like this: https://css-tricks.com/creating-css-sliding-door-effect/
-- intro and winning music (source https://scummbar.com/resources/downloads/index.php?todo=MP3)
+- Make the audio on/off option persistent beyond a page refrech
+- Make the initial screen appear only when the user restarts the whole game and not on every refresh
 - Add more game characters and allow player selection
-- LocalStorage or SessionStorage?
-- Other cool stuff, like cleaning the code
+- MAKE IT RESPONSIVE!
 
 ## Tech used
 
@@ -98,6 +101,7 @@ Now that the prototype works, I've started polishing the visual approach. There 
 - You don't need to be a genius to use an online image editor
 - But you always need to check a color wheel like Adobe
 - It's hard to work with colors and contrasts.
+- CSS is very flexible and it DOES have a logic behind it
 - ==That there is a balance between it works and make it better, and between adding new functionalities and redesign the whole thing to fit them.==
 
 <a href="https://ikilzig.github.io/tic-tac-toe/" target="_blank">Click here to play the game</a>

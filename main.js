@@ -1,4 +1,4 @@
-////////////// STARTING CONDITIONS
+////////////// STARTING CONDITIONS - UNDER DEVELOPMENT
 function start() {
   if (localStorage.getItem('startScreenCondition') == '1') {
     document.querySelector('.initial-hello').classList.remove('fade-out-image');
