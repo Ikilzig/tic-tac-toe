@@ -1,19 +1,3 @@
-////////////// STARTING CONDITIONS - UNDER DEVELOPMENT
-function start() {
-  if (localStorage.getItem('startScreenCondition') == '1') {
-    document.querySelector('.initial-hello').classList.remove('fade-out-image');
-  }
-  if (audioMute[i].muted) {
-    audioMute[i].muted = false;
-    document.querySelector('.mute').textContent = 'Audio On';
-  } else {
-    audioMute[i].muted = true;
-    document.querySelector('.mute').textContent = 'Audio Off';
-  }
-}
-
-start();
-
 // general counters
 var playerOneWinCounter = localStorage.getItem('persistentScorePlayerOne');
 var playerTwoWinCounter = localStorage.getItem('persistentScorePlayerTwo');
@@ -22,6 +6,21 @@ var generalTurnCounter = 0;
 // general variables
 var boardGameArray = document.querySelectorAll('div');
 console.log(boardGameArray);
+
+//mute audio
+var audioMute = document.querySelectorAll('#audio');
+function muteAudio() {
+  for (i = 0; i < audioMute.length; i++) {
+    if (audioMute[i].muted) {
+      audioMute[i].muted = false;
+      document.querySelector('.mute').textContent = 'Audio On';
+    } else {
+      audioMute[i].muted = true;
+      document.querySelector('.mute').textContent = 'Audio Off';
+    }
+  }
+}
+document.querySelector('.mute').addEventListener('click', muteAudio, false);
 
 // Starting conditions
 speechBubblePlayerOneDisappar();
@@ -41,93 +40,7 @@ if (playerTwoWinCounter !== 0) {
   document.querySelector('.points-player-two').textContent = '0';
 }
 
-////////////// BUTTONS ///////////
-/// GAME START
-document.querySelector('.start-the-game').addEventListener('click', gameStart);
-
-function gameStart() {
-  localStorage.setItem('startScreenCondition', 'off');
-  document.querySelector('.initial-hello').classList.add('fade-out-image');
-  document.querySelector('.intro-audio').play();
-}
-
-//Start message if false, remove class that removes it - NOT WORKING
-function start() {
-  if (localStorage.getItem('startScreenCondition') === 'on') {
-    document.querySelector('.initial-hello').classList.remove('fade-out-image');
-  }
-}
-
-// button play again
-document
-  .querySelector('.reset-button')
-  .addEventListener('click', resetBoardForNextGame);
-
-function resetBoardForNextGame(event) {
-  for (i = 0; i < boardGameArray.length; i++) {
-    boardGameArray[i].classList.remove('markings-player-one');
-    boardGameArray[i].classList.remove('markings-player-two');
-  }
-  generalTurnCounter = 0;
-  document.querySelector('.message-board').textContent = "Let's do it, Pirate!";
-  document.querySelector('.player-one-name').classList.remove('winner');
-  document.querySelector('.player-two-name').classList.remove('winner');
-  speechBubblePlayerOneDisappar();
-  speechBubblePlayerTwoDisappar();
-  document.querySelector('.dialogs-player-one').textContent = ' ';
-  document.querySelector('.dialogs-player-two').textContent = ' ';
-}
-
-//reset all the game button
-document
-  .querySelector('.reset-all-game')
-  .addEventListener('click', resetAllScore);
-
-function resetAllScore() {
-  document.querySelector('.points-player-one').textContent = 0;
-  document.querySelector('.points-player-two').textContent = 0;
-  document.querySelector('.message-board').textContent =
-    'Argg, that damn Monkey Curse!';
-  resetBoardForNextGame();
-  speechBubblePlayerOneDisappar();
-  speechBubblePlayerTwoDisappar();
-  document.querySelector('.dialogs-player-one').textContent = ' ';
-  document.querySelector('.dialogs-player-two').textContent = ' ';
-  localStorage.setItem('persistentScorePlayerTwo', 0);
-  localStorage.setItem('persistentScorePlayerOne', 0);
-  playerOneWinCounter = 0;
-  playerTwoWinCounter = 0;
-  localStorage.setItem('startScreenCondition', 'off');
-  document.querySelector('.initial-hello').classList.remove('fade-out-image');
-}
-// MUTE AUDIO ///
-var audioMute = document.querySelectorAll('#audio');
-function muteAudio() {
-  for (i = 0; i < audioMute.length; i++) {
-    if (audioMute[i].muted) {
-      audioMute[i].muted = false;
-      document.querySelector('.mute').textContent = 'Audio On';
-    } else {
-      audioMute[i].muted = true;
-      document.querySelector('.mute').textContent = 'Audio Off';
-    }
-  }
-}
-
-document.querySelector('.mute').addEventListener('click', muteAudio, false);
-
-// ABOUT ME
-
-function aboutMePopup() {
-  var aboutMe = document.getElementById('aboutmetext');
-  aboutMe.classList.toggle('show');
-}
-
-document
-  .querySelector('.information-pop-up')
-  .addEventListener('click', aboutMePopup);
-
-///////////////// Pirate insults //////////
+// Pirate insults
 var playerOneInsultsArray = [
   'This is the END for you, you gutter-crawling cur!',
   "Soon you'll be wearing my sword like a shish kebab!",
@@ -157,7 +70,6 @@ var playerTwoInsultsArray = [
   'I see people like you passed-out on tavern floors',
 ];
 
-///////////// Game Flow //////////
 // Function that regulates players turns
 function playersTurn(event) {
   // This runs up to 9 times
@@ -202,6 +114,47 @@ function playersTurn(event) {
 }
 // players playing
 document.querySelector('.board').addEventListener('click', playersTurn);
+
+//reset button play again
+document
+  .querySelector('.reset-button')
+  .addEventListener('click', resetBoardForNextGame);
+
+function resetBoardForNextGame(event) {
+  for (i = 0; i < boardGameArray.length; i++) {
+    boardGameArray[i].classList.remove('markings-player-one');
+    boardGameArray[i].classList.remove('markings-player-two');
+  }
+  generalTurnCounter = 0;
+  document.querySelector('.message-board').textContent = "Let's do it, Pirate!";
+  document.querySelector('.player-one-name').classList.remove('winner');
+  document.querySelector('.player-two-name').classList.remove('winner');
+  speechBubblePlayerOneDisappar();
+  speechBubblePlayerTwoDisappar();
+  document.querySelector('.dialogs-player-one').textContent = ' ';
+  document.querySelector('.dialogs-player-two').textContent = ' ';
+}
+
+//reset score button
+document
+  .querySelector('.reset-score-button')
+  .addEventListener('click', resetAllScore);
+
+function resetAllScore() {
+  document.querySelector('.points-player-one').textContent = 0;
+  document.querySelector('.points-player-two').textContent = 0;
+  document.querySelector('.message-board').textContent =
+    'Argg, that damn Monkey Curse!';
+  resetBoardForNextGame();
+  speechBubblePlayerOneDisappar();
+  speechBubblePlayerTwoDisappar();
+  document.querySelector('.dialogs-player-one').textContent = ' ';
+  document.querySelector('.dialogs-player-two').textContent = ' ';
+  localStorage.setItem('persistentScorePlayerTwo', 0);
+  localStorage.setItem('persistentScorePlayerOne', 0);
+  playerOneWinCounter = 0;
+  playerTwoWinCounter = 0;
+}
 
 //winningfunctions
 
@@ -356,7 +309,16 @@ function RulesForWinning() {
   }
 }
 
-////////// PLAYERS INTERACTION ///////
+// ABOUT ME
+
+function aboutMePopup() {
+  var aboutMe = document.getElementById('aboutmetext');
+  aboutMe.classList.toggle('show');
+}
+
+document
+  .querySelector('.information-pop-up')
+  .addEventListener('click', aboutMePopup);
 
 //Dialog insults function
 

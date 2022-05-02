@@ -1,81 +1,3 @@
-.initial-hello {
-  width: 70%;
-  height: 70%;
-  background: radial-gradient(rgba(37, 42, 80, 0.956), rgb(12, 17, 52));
-  position: absolute;
-  top: 21%;
-  left: 15%;
-  border-radius: 20px;
-}
-
-.initial-hello::after {
-  content: '';
-  position: absolute;
-  bottom: -30px;
-  background: rgb(0, 13, 64);
-  width: 90%;
-  height: 4px;
-  left: 3%;
-  border-radius: 50%;
-  filter: blur(3px);
-}
-
-h2 {
-  display: flex;
-  justify-content: center;
-  margin: 10% 30% 20% 30%;
-  /* left: 10%;
-  top: 10%; */
-  text-align: center;
-  max-width: 600px;
-  color: whitesmoke;
-  padding-bottom: 30px;
-  flex-direction: column;
-  align-items: center;
-  font-size: xx-large;
-}
-
-.start-the-game {
-  font-family: 'Sail', cursive;
-  /* height: 4em;
-  width: 7em; */
-  animation: wiggle 2s linear infinite;
-  border: none;
-  border-top: 5px solid rgb(0, 13, 64);
-  border-radius: 0.2em 0.2em 0.2em 0.2em;
-  font-size: 1em;
-  color: radial-gradient(rgba(37, 42, 80, 0.889), rgba(12, 17, 52, 0.889));
-  background-color: whitesmoke;
-  transform-origin: 50% 5em;
-  margin-top: 60px;
-}
-/* Keyframes */
-@keyframes wiggle {
-  0%,
-  7% {
-    transform: rotateZ(0);
-  }
-  15% {
-    transform: rotateZ(-15deg);
-  }
-  20% {
-    transform: rotateZ(10deg);
-  }
-  25% {
-    transform: rotateZ(-10deg);
-  }
-  30% {
-    transform: rotateZ(6deg);
-  }
-  35% {
-    transform: rotateZ(-4deg);
-  }
-  40%,
-  100% {
-    transform: rotateZ(0);
-  }
-}
-
 a {
   color: whitesmoke;
 }
@@ -90,6 +12,14 @@ body {
   cursor: crosshair;
 }
 
+/* The idea here was to make the player's avatar shine when winning, but I decided to use the glow on the name instead
+ #player-one-avatar {
+  border-radius: 50%;
+  background-color: rgba(37, 42, 80, 0.889);
+  box-shadow: 0 0 0px 0px #fff, 0 0 100px 60px rgb(104, 58, 177),
+    0 0 40px 50px #0ff;
+} */
+
 h1 {
   text-align: center;
   margin-left: 75px;
@@ -100,11 +30,20 @@ h1 {
   text-align: center;
 }
 
+h2,
 h3 {
   text-align: center;
   max-width: 600px;
   margin: auto;
   color: whitesmoke;
+}
+
+h2 {
+  border-bottom: 1px solid whitesmoke;
+  padding-bottom: 10px;
+}
+
+h3 {
   margin-bottom: 20px;
   padding: 10px;
   border: 5px whitesmoke double;
@@ -131,7 +70,7 @@ article {
   align-content: center;
   justify-items: center;
   color: whitesmoke;
-  font-size: x-large;
+  font-size: larger;
   margin-top: 30px;
   margin-bottom: -20px;
   padding-bottom: -10px;
@@ -239,7 +178,7 @@ aside {
 .information-pop-up .popuptext {
   visibility: hidden;
   width: 400px;
-  background-color: rgb(31, 26, 49);
+  background-color: #555;
   color: #fff;
   text-align: center;
   border-radius: 6px;
@@ -249,8 +188,6 @@ aside {
   bottom: 125%;
   left: -130%;
   margin-left: -80px;
-  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
-  font-style: italic;
 }
 
 /* Popup arrow */
@@ -295,63 +232,4 @@ footer {
   margin: 50px;
   color: whitesmoke;
   font-size: larger;
-}
-
-.fade-out-image {
-  animation: fadeOut 4s forwards;
-  -webkit-animation: fadeOut 2s forwards;
-  -moz-animation: fadeOut 2s forwards;
-  -o-animation: fadeOut 2s forwards;
-  -ms-animation: fadeOut 2s forwards;
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-  from {
-    top: 0%;
-  }
-  to {
-    top: 200%;
-  }
-}
-
-@-moz-keyframes fadeIn {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@-o-keyframes fadeIn {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@-ms-keyframes fadeIn {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
 }
