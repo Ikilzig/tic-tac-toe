@@ -129,14 +129,14 @@ document
 
 ///////////////// Pirate insults //////////
 var playerOneInsultsArray = [
-  'This is the END for you, you gutter-crawling cur!',
-  "Soon you'll be wearing my sword like a shish kebab!",
+  'This is the end, you gutter-crawling cur!',
+  "Soon you'll be wearing my sword like a kebab!",
   'My handkerchief will wipe up your blood!',
   'I once owned a dog that was smarter then you',
   'You make me want to puke',
   "Nobody's ever drawn blood from me",
   'You fight like a dairy farmer',
-  'I got this scar on my face during a mighty struggle!',
+  'I got this scar during a mighty struggle!',
   "I've heard you were a contemptible sneak",
   'Have you stopped wearing diapers yet?',
   'There are no clever moves that can help you now',
@@ -146,15 +146,15 @@ var playerOneInsultsArray = [
 var playerTwoInsultsArray = [
   "You're no match for my brains, you poor fool",
   'You have the manners of a beggar',
-  "I'm not going to take your insolence sitting down!",
+  "I'm not going to take your insolence like that!",
   'There are no words for how disgusting you are',
   "I've spoken with apes more polite then you",
-  'My wisest enemies run away at the first sight of me!',
+  'My wisest enemies run away from me!',
   'Only once have I met such a coward!',
   'I hope you have a boat ready for a quick escape',
   'Every word you say to me is stupid',
   'You are a pain in the backside, sir!',
-  'I see people like you passed-out on tavern floors',
+  'I see people like you passed-out on the local pub',
 ];
 
 ///////////// Game Flow //////////
