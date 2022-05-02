@@ -7,6 +7,8 @@ var generalTurnCounter = 0;
 var boardGameArray = document.querySelectorAll('div');
 console.log(boardGameArray);
 
+pointsStorage = window.localStorage;
+
 //mute audio
 var audioMute = document.querySelectorAll('#audio');
 function muteAudio() {
@@ -134,8 +136,8 @@ document
   .addEventListener('click', resetAllScore);
 
 function resetAllScore() {
-  document.querySelector('.pointsPlayerOne').textContent = 0;
-  document.querySelector('.pointsPlayerTwo').textContent = 0;
+  document.querySelector('.points-player-one').textContent = 0;
+  document.querySelector('.points-player-two').textContent = 0;
   document.querySelector('.message-board').textContent =
     'Argg, that damn Monkey Curse!';
   resetBoardForNextGame();
@@ -150,7 +152,8 @@ function resetAllScore() {
 function playerOneWins() {
   playerOneWinCounter++;
   generalTurnCounter = generalTurnCounter + boardGameArray.length;
-  document.querySelector('.pointsPlayerOne').textContent = playerOneWinCounter;
+  document.querySelector('.points-player-one').textContent =
+    playerOneWinCounter;
   document.querySelector('.message-board').textContent =
     'Guybrush Treepwood wins!';
   document.querySelector('.win-audio').play();
@@ -161,8 +164,10 @@ function playerOneWins() {
 
 function playerTwoWins() {
   playerTwoWinCounter++;
+  localStorage.setItem('point');
   generalTurnCounter = generalTurnCounter + boardGameArray.length;
-  document.querySelector('.pointsPlayerTwo').textContent = playerTwoWinCounter;
+  document.querySelector('.points-player-two').textContent =
+    playerTwoWinCounter;
   document.querySelector('.message-board').textContent =
     'Captain LeChuck wins!';
   document.querySelector('.win-audio').play();

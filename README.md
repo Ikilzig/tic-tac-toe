@@ -7,6 +7,8 @@ Monkey Island.
 
 [Click here to play the game.](https://ikilzig.github.io/tic-tac-toe/)
 
+(The game is optmized for a minimum width of 1024px)
+
 ## Plan for solving the problem
 
 ### Plan
