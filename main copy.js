@@ -1,18 +1,18 @@
 ////////////// STARTING CONDITIONS - UNDER DEVELOPMENT
-// function start() {
-//   if (localStorage.getItem('startScreenCondition') == '1') {
-//     document.querySelector('.initial-hello').classList.remove('fade-out-image');
-//   }
-//   if (audioMute[i].muted) {
-//     audioMute[i].muted = false;
-//     document.querySelector('.mute').textContent = 'Audio On';
-//   } else {
-//     audioMute[i].muted = true;
-//     document.querySelector('.mute').textContent = 'Audio Off';
-//   }
-// }
+function start() {
+  if (localStorage.getItem('startScreenCondition') == '1') {
+    document.querySelector('.initial-hello').classList.remove('fade-out-image');
+  }
+  if (audioMute[i].muted) {
+    audioMute[i].muted = false;
+    document.querySelector('.mute').textContent = 'Audio On';
+  } else {
+    audioMute[i].muted = true;
+    document.querySelector('.mute').textContent = 'Audio Off';
+  }
+}
 
-// start();
+start();
 
 // general counters
 var playerOneWinCounter = localStorage.getItem('persistentScorePlayerOne');
