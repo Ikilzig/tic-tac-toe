@@ -6,6 +6,8 @@ This is a take on the classic TIC-TAC-TOE that pays homage to one of the best vi
 
 It was built as the 1st Project (3rd week) of the General Assembly Software Engineer Immersive, 12-week course, in May 2022.
 
+<a href="https://ikilzig.github.io/tic-tac-toe/" target="_blank">Click here to play the game</a>
+
 [Click here to play the game.](https://ikilzig.github.io/tic-tac-toe/)
 
 (The game is optmized for a minimum width of 1024px)
