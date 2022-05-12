@@ -1,6 +1,6 @@
 .initial-hello {
   width: 70%;
-  min-height: 70%;
+  height: 70%;
   background: radial-gradient(rgba(37, 42, 80, 0.956), rgb(12, 17, 52));
   position: absolute;
   top: 21%;
@@ -86,7 +86,7 @@ body {
   justify-items: center;
   background: radial-gradient(rgba(37, 42, 80, 0.889), rgba(12, 17, 52, 0.889));
   font-family: 'Sail', cursive;
-  /* margin: 0 auto; */
+  margin: 0 auto;
   cursor: crosshair;
 }
 
@@ -353,66 +353,5 @@ footer {
   }
   100% {
     opacity: 0;
-  }
-}
-
-/* RESPONSIVE /////////// */
-@media only screen and (max-width: 600px) {
-  .initial-hello {
-    display: none;
-  }
-  h2 {
-    display: none;
-  }
-  h1 {
-    max-width: 70%;
-    display: flex;
-  }
-  .start-the-game {
-    display: none;
-  }
-  .player-one-avatar {
-    display: none;
-  }
-  .player-two-avatar {
-    display: none;
-  }
-  /* body {
-    display: grid;
-    justify-content: center;
-    align-content: space-evenly;
-    justify-items: center;
-  }
-  /* .information-pop-up {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  } */
-  */ .speech-appear {
-    display: contents;
-  }
-
-  .player-one {
-    display: none;
-    flex-direction: column;
-    color: whitesmoke;
-    font-size: x-large;
-  }
-
-  .player-two {
-    display: none;
-    flex-direction: column;
-    color: whitesmoke;
-    font-size: x-large;
-  }
-
-  .player-two-name,
-  .player-one-name {
-    margin: 0px;
-  }
-
-  .player-info {
-    max-width: 100px;
-    margin-top: 10px;
   }
 }
