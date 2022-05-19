@@ -358,6 +358,11 @@ footer {
 
 /* RESPONSIVE /////////// */
 @media only screen and (max-width: 600px) {
+  * {
+    margin: 3px;
+    padding: 0;
+    box-sizing: border-box;
+  }
   .initial-hello {
     display: none;
   }
@@ -412,7 +417,49 @@ footer {
   }
 
   .player-info {
-    max-width: 100px;
+    max-width: 100%;
     margin-top: 10px;
+  }
+
+  .board {
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    /* column-gap: 0.6fr;
+    row-gap: 0.6fr; */
+    background-image: url(./images/game-board.png);
+    background-size: 80%;
+    background-position: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+  }
+  div {
+    border: 0px;
+    height: 1fr;
+    width: 1fr;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+
+  .logo {
+    max-width: 300px;
+    text-align: center;
+  }
+  body {
+    display: grid;
+
+    align-content: space-evenly;
+    justify-items: center;
+    background: radial-gradient(
+      rgba(37, 42, 80, 0.889),
+      rgba(12, 17, 52, 0.889)
+    );
+    font-family: 'Sail', cursive;
+    /* margin: 0 auto; */
+    cursor: crosshair;
   }
 }
