@@ -6,7 +6,7 @@ This is a take on the classic TIC-TAC-TOE that pays homage to one of the best vi
 
 It was built as the 1st Project (3rd week) of the General Assembly Software Engineer Immersive, 12-week course, in May 2022.
 
-[Click here to play the game.](https://ikilzig.github.io/tic-tac-toe/)
+[Click here to play the game.](https://palvarezimaz.github.io/tic-tac-toe/)
 
 (The game is optmized for a minimum width of 1024px)
 
@@ -114,4 +114,4 @@ Cool things (from a beginner point of view) used:
 - CSS is very flexible and it DOES have a logic behind it
 - ==That there is a balance between it works and make it better, and between adding new functionalities and redesigning the whole thing to fit them.==
 
-<a href="https://ikilzig.github.io/tic-tac-toe/" target="_blank">Click here to play the game</a>
+<a href="https://palvarezimaz.github.io/tic-tac-toe/" target="_blank">Click here to play the game</a>
