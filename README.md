@@ -1,8 +1,10 @@
 # TIC - TAC - TOE
 
+### **Attention: you will need a screen with a resolution of at least 980px wide to fully enjoy this game**
+
 ## Summary
 
-This is a take on the classic TIC-TAC-TOE that pays homage to one of the best video games EVER (at least of my childhood...), called Monkey Island.
+This is a take on the classic TIC-TAC-TOE that pays homage to one of the greatest video games, called Monkey Island.
 
 It was built as the 1st Project (3rd week) of the General Assembly Software Engineer Immersive, 12-week course, in May 2022.
 
@@ -115,3 +117,7 @@ Cool things (from a beginner point of view) used:
 - ==That there is a balance between it works and make it better, and between adding new functionalities and redesigning the whole thing to fit them.==
 
 <a href="https://palvarezimaz.github.io/tic-tac-toe/" target="_blank">Click here to play the game</a>
+
+## License
+
+This app was created for educational purposes as Project 1 for the GA Software Engineer Immersive course, cohort #53 (2022), under the <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License.
