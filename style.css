@@ -3,9 +3,10 @@ a {
 }
 body {
   display: grid;
-  justify-content: center;
+  justify-content: space-around;
   align-content: space-evenly;
-  justify-items: center;
+  justify-items: space-around;
+  /* justify-items: center; */
   background: radial-gradient(rgba(37, 42, 80, 0.889), rgba(12, 17, 52, 0.889));
   font-family: 'Sail', cursive;
   margin: 0 auto;
@@ -150,6 +151,10 @@ aside {
   text-align: center;
 }
 
+footer {
+  text-align: center;
+}
+
 /* Popup container */
 .information-pop-up {
   position: relative;
@@ -221,12 +226,15 @@ footer {
 
 /* ///////////   Intro screen ////////// */
 .initial-hello {
-  width: 70%;
-  height: 70%;
+  width: 100%;
+  height: 100%;
+  /* width: 70%; */
+  /* height: 70%; */
   background: radial-gradient(rgba(37, 42, 80, 0.956), rgb(12, 17, 52));
   position: absolute;
-  top: 21%;
-  left: 15%;
+  margin: 0 auto;
+  /* top: 21%; */
+  /* left: 15%; */
   border-radius: 20px;
 }
 
@@ -235,7 +243,7 @@ footer {
   position: absolute;
   bottom: -30px;
   background: rgb(0, 13, 64);
-  width: 90%;
+  /* width: 90%; */
   height: 4px;
   left: 3%;
   border-radius: 50%;
@@ -252,11 +260,12 @@ footer {
 h2 {
   display: flex;
   justify-content: center;
-  margin: 10% 30% 20% 30%;
+  margin: 10vh;
+  /* margin: 10% 30% 20% 30%; */
   /* left: 10%;
   top: 10%; */
   text-align: center;
-  max-width: 600px;
+  /* max-width: 70%; */
   color: whitesmoke;
   padding-bottom: 30px;
   flex-direction: column;
