@@ -6,7 +6,6 @@ body {
   justify-content: space-around;
   align-content: space-evenly;
   justify-items: space-around;
-  /* justify-items: center; */
   background: radial-gradient(rgba(37, 42, 80, 0.889), rgba(12, 17, 52, 0.889));
   font-family: 'Sail', cursive;
   margin: 0 auto;
@@ -228,13 +227,9 @@ footer {
 .initial-hello {
   width: 100%;
   height: 100%;
-  /* width: 70%; */
-  /* height: 70%; */
   background: radial-gradient(rgba(37, 42, 80, 0.956), rgb(12, 17, 52));
   position: absolute;
   margin: 0 auto;
-  /* top: 21%; */
-  /* left: 15%; */
   border-radius: 20px;
 }
 
@@ -243,7 +238,6 @@ footer {
   position: absolute;
   bottom: -30px;
   background: rgb(0, 13, 64);
-  /* width: 90%; */
   height: 4px;
   left: 3%;
   border-radius: 50%;
@@ -261,11 +255,7 @@ h2 {
   display: flex;
   justify-content: center;
   margin: 10vh;
-  /* margin: 10% 30% 20% 30%; */
-  /* left: 10%;
-  top: 10%; */
   text-align: center;
-  /* max-width: 70%; */
   color: whitesmoke;
   padding-bottom: 30px;
   flex-direction: column;
@@ -275,8 +265,6 @@ h2 {
 
 .start-the-game {
   font-family: 'Sail', cursive;
-  /* height: 4em;
-  width: 7em; */
   animation: wiggle 2s linear infinite;
   border: none;
   border-top: 5px solid rgb(0, 13, 64);
