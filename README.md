@@ -1,5 +1,7 @@
 # TIC - TAC - TOE
 
+### **Attention: you will need a screen with a resolution of at least 980px wide to fully enjoy this game**
+
 ## Summary
 
 This is a take on the classic TIC-TAC-TOE that pays homage to one of the best video games EVER (at least of my childhood...), called Monkey Island.
