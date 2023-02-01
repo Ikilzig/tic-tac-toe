@@ -237,7 +237,8 @@ footer {
   content: '';
   position: absolute;
   bottom: -30px;
-  background: rgb(0, 13, 64);
+  /* background: rgb(0, 13, 64); */
+  background: red;
   height: 4px;
   left: 3%;
   border-radius: 50%;
@@ -302,12 +303,17 @@ h2 {
   }
 }
 
+.invisible-image {
+  display: none;
+}
+
 .fade-out-image {
   animation: fadeOut 4s forwards;
   -webkit-animation: fadeOut 2s forwards;
   -moz-animation: fadeOut 2s forwards;
   -o-animation: fadeOut 2s forwards;
   -ms-animation: fadeOut 2s forwards;
+
 }
 
 @keyframes fadeOut {
@@ -358,5 +364,6 @@ h2 {
   }
   100% {
     opacity: 0;
+
   }
 }

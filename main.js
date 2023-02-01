@@ -43,12 +43,20 @@ if (playerTwoWinCounter !== 0) {
 
 ////////////// BUTTONS ///////////
 /// GAME START
-document.querySelector('.start-the-game').addEventListener('click', gameStart);
+document.querySelector('.start-the-game').addEventListener('click',
+  gameStart
+);
+
+function invisibleImage() {
+  document.querySelector('.initial-hello').classList.add('invisible-image');
+}
 
 function gameStart() {
   localStorage.setItem('startScreenCondition', 'off');
   document.querySelector('.initial-hello').classList.add('fade-out-image');
   document.querySelector('.intro-audio').play();
+  setTimeout(invisibleImage, 2000)
+
 }
 
 //Start message if false, remove class that removes it - NOT WORKING
