@@ -1,29 +1,13 @@
-////////////// STARTING CONDITIONS - UNDER DEVELOPMENT
-// function start() {
-//   if (localStorage.getItem('startScreenCondition') == '1') {
-//     document.querySelector('.initial-hello').classList.remove('fade-out-image');
-//   }
-//   if (audioMute[i].muted) {
-//     audioMute[i].muted = false;
-//     document.querySelector('.mute').textContent = 'Audio On';
-//   } else {
-//     audioMute[i].muted = true;
-//     document.querySelector('.mute').textContent = 'Audio Off';
-//   }
-// }
+// Starting conditions
 
-// start();
 
-// general counters
 var playerOneWinCounter = localStorage.getItem('persistentScorePlayerOne');
 var playerTwoWinCounter = localStorage.getItem('persistentScorePlayerTwo');
 var generalTurnCounter = 0;
 
-// general variables
 var boardGameArray = document.querySelectorAll('div');
 console.log(boardGameArray);
 
-// Starting conditions
 speechBubblePlayerOneDisappar();
 speechBubblePlayerTwoDisappar();
 
@@ -58,8 +42,6 @@ function gameStart() {
   setTimeout(invisibleImage, 2000)
 
 }
-
-//Start message if false, remove class that removes it - NOT WORKING
 function start() {
   if (localStorage.getItem('startScreenCondition') === 'on') {
     document.querySelector('.initial-hello').classList.remove('fade-out-image');
@@ -124,7 +106,7 @@ function muteAudio() {
 
 document.querySelector('.mute').addEventListener('click', muteAudio, false);
 
-// ABOUT ME
+// ABOUT ME POP UP
 
 function aboutMePopup() {
   var aboutMe = document.getElementById('aboutmetext');
@@ -185,8 +167,6 @@ function playersTurn(event) {
         playerOneDialogEachTurn();
       }
       RulesForWinning();
-
-      // console.log(generalTurnCounter); // checkpoint
     } else {
       if (squareClickedOn.tagName === 'DIV') {
         if (
@@ -202,7 +182,6 @@ function playersTurn(event) {
         }
       }
       RulesForWinning();
-      // console.log(generalTurnCounter); // checkpoint
     }
   } else {
     alert('The game is over! Click on Play again to.. play again');
@@ -384,7 +363,6 @@ function playerTwoDialogEachTurn() {
   speechBubblePlayerOneDisappar();
 }
 
-// speech bubble dissapear
 function speechBubblePlayerOneDisappar() {
   var speechBubbleToAppear = document.querySelector('#speech-player-one');
   speechBubbleToAppear.classList.add('speech-disappear');
@@ -395,7 +373,6 @@ function speechBubblePlayerTwoDisappar() {
   speechBubbleToAppear.classList.add('speech-disappear');
 }
 
-//function bubble appear
 function speechBubblePlayerOneAppear() {
   var speechBubbleToAppear = document.querySelector('#speech-player-one');
   speechBubbleToAppear.classList.remove('speech-disappear');
